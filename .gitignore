@@ -1,0 +1,17 @@
+% Python
+*.pyc
+
+% Random editor junk
+.*
+*.swp
+*~
+
+% LaTeX files
+*.blg
+*.tex
+*.bbl
+*.aux
+*.log
+
+% Output files
+*.pdf

@@ -18,6 +18,9 @@ integer multiplication problems.
 * Compile the generated LaTeX source with `pdflatex out.tex`
 * Output is in `out.pdf`
 
+An example output looks something like this:
+
+![Cubinose Example Output](http://jhnet.co.uk/misc/cubinose.png)
 
 Useful Formulae
 ---------------

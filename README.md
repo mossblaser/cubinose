@@ -6,21 +6,27 @@ tiles whose edges contain either questions or answers to simple problems. Tiles
 with matching question/answer pairs should be placed next to eachother in a
 style similar to dominoes.
 
-Usage:
-------
+Usage
+-----
 
-Note: Currently proof of concept only! Generates puzzles with simple
-integer multiplication problems.
+	python . --shape SHAPE [SHAPE_ARGUMENT...] \
+	         --problem PROBLEM [PROBLEM_ARGUMENT...] \
+	                   [--prefix PREFIX] \
+	                   [--proportion PROPORTION]
 
-* Run `python gen_puzzle.py` specifying the size of the puzzle at the end of
-  `gen_puzzle.py`.
-* The program produces `out.tex` containing a TikZ representation of the puzzle
-* Compile the generated LaTeX source with `pdflatex out.tex`
-* Output is in `out.pdf`
+Produces (on stdout) a LaTeX file containing the puzzle. To see a list of
+shapes and problems, run `python . -h`.
 
-An example output looks something like this:
+An example with two difficulties of multiplication question, 25% easy, 75%
+harder:
 
-![Cubinose Example Output](http://jhnet.co.uk/misc/cubinose.png)
+	python . --shape triangle 5 \
+	         --problem multidigit_multiplication '(1, 1)' \
+	                   --prefix "blue" \
+	                   --proportion 25 \
+	         --problem multidigit_multiplication '(2, 2)' \
+	                   --prefix "red" \
+	                   --proportion 75
 
 Useful Formulae
 ---------------

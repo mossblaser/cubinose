@@ -17,6 +17,9 @@ Usage
 Produces (on stdout) a LaTeX file containing the puzzle. To see a list of
 shapes and problems, run `python . -h`.
 
+Examples
+--------
+
 An example with two difficulties of multiplication question, 25% easy, 75%
 harder:
 
@@ -27,6 +30,27 @@ harder:
 	         --problem multidigit_multiplication '(2, 2)' \
 	                   --prefix "red" \
 	                   --proportion 75
+
+An example with convertion between pie-charts and propper and impropper
+fractions.
+
+	python . --shape triangle 9 \
+	         --problem fraction_conversion 0 3   2 6 '"mixed"' '"pie"' \
+	                   --prefix "red" \
+	         --problem fraction_conversion 0 3   2 6 '"impropper"' '"pie"' \
+	                   --prefix "blue"
+
+An example with convertion between propper and impropper fractions with small
+denominators.
+
+	python . --shape triangle 9 \
+	         --problem fraction_conversion 0 3   2 12 '"mixed"' '"impropper"'
+
+An example with convertion between propper and impropper fractions with large
+denominators.
+
+	python . --shape triangle 9 \
+	         --problem fraction_conversion 0 3   2 100 '"mixed"' '"impropper"'
 
 Useful Formulae
 ---------------
